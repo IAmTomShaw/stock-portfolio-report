@@ -6,7 +6,7 @@ import { sendPortfolioReport } from "../email/send-report.js";
 
 export const portfolioWeeklyReportTask = schedules.task({
   id: "portfolio-weekly-report",
-  cron: "0 13 * * 1",
+  cron: "0 12 * * 7", // Every Sunday at 12:00 PM UTC
   maxDuration: 300,
 
   run: async (payload) => {
